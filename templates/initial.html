@@ -5,10 +5,15 @@
 {%endblock%}
 
 {% block body %}
-  <form>
+  <form action="{{ url_for('register') }}" method="get">
 
-    <input type="text" name="" placeholder="username">
-    <input type="text" name="" placeholder="password">
+    <button>Register</button>
+
+  </form>
+
+  <form action="{{ url_for('login') }}" method="get">
+
+    <button>Login</button>
 
   </form>
 {%endblock%}

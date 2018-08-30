@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+  success!
+{% endblock %}
+
+{% block body %}
+  <p>you have sucessfully registered an account!</p>
+  <p>click on the button below to take you to the login page!</p>
+
+  <form action="{{ url_for('login') }}" method="post">
+
+    <button>click me!</button>
+
+  </form>
+
+{% endblock %}

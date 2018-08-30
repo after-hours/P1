@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <script>
+    alert("success: you have sucessfully loged into your account")
+  </script>
+
+  <link href="application.py">
+{% endblock %}
+
+
+{% block heading %}
+  books
+{% endblock %}
+
+{% block body %}
+  <p>this is where all the books will be displayed</p>
+  <p>{{book_titles[0]}}</p>
+  <ul>
+      {% for i in book_titles %}
+        <li>
+          <p><a href="{{ url_for('login')}}">{{i}}</a></p>
+        </li>
+      {% endfor %}
+  </ul>
+
+  <!--
+  1)get all the book titles from users
+  2)a loop to go through all book titles
+  3)<ol> <li> all book titles on screen </li> </ol>
+  -->
+
+
+  <p>{{ login_details[1] }}</p>
+{% endblock %}
